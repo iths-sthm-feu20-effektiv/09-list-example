@@ -1,3 +1,28 @@
 .App {
-  text-align: center;
+	background-color: #1E2F89;
+	color: #DFC0C0;
+
+	height: 100vh;
+	padding-left: 3em;
+	padding-right: 3em;
+}
+.App h1 {
+	text-align: center;
+}
+.song-list {
+	margin-top: 1em;
+	list-style-type: none;
+}
+.song-list > li {
+	/* padding-bottom: 0.25em;
+	padding-top: 0.25em;
+	padding-left: 1em; */
+	padding: 0.25em 1em;
+	background-color: #1C58C1;
+}
+.song-list > li:nth-child(even) {
+	background-color: #4122B3;
+}
+.selected {
+	padding-left: 2em;
 }
