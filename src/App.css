@@ -14,15 +14,17 @@
 	list-style-type: none;
 }
 .song-list > li {
-	/* padding-bottom: 0.25em;
-	padding-top: 0.25em;
-	padding-left: 1em; */
 	padding: 0.25em 1em;
 	background-color: #3028CF;
+	transition: padding 0.5s;
+}
+.song-list > li:hover {
+	cursor: pointer;
+	text-decoration: underline;
 }
 .song-list > li:nth-child(even) {
 	background-color: #4C28CF;
 }
-.selected {
+.song-list > li.selected {
 	padding-left: 2em;
 }

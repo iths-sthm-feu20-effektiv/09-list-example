@@ -4,12 +4,13 @@ import './App.css';
 interface Song {
     id: number,
     artist: string,
-    title: string
+    title: string,
+    spotifyUrl?: string
 }
 
 function App() {
     const dataList: Song[] = [
-        { id: 1, artist: 'Kraftwerk', title: 'Das Model' },
+        { id: 1, artist: 'Kraftwerk', title: 'Das Model', spotifyUrl: 'example' },
         { id: 2, artist: 'Brian Eno', title: 'Dune Prophecy theme' },
         { id: 3, artist: 'Bob Dylan', title: 'Hurricane' },
         { id: 4, artist: 'Slagsmålsklubben', title: 'Destiny' },
@@ -25,9 +26,23 @@ function App() {
 
     const [selectedId, setSelectedId] = useState(-1)
 
+    // Exempel: skapa en state-variabel som har en tom lista som default-värde
+    // const [array, setArray] = useState<string[]>([])
+
+
+    // ==  <- compare with automatic type conversion
+    // === <- compare, no type conversion
+    let selectedSong = dataList.find(song => song.id === selectedId)
+    let selectedMessage = 'No song selected.'
+    if( selectedSong ) {
+        selectedMessage = 'You selected ' + selectedSong.title + '.'
+    }
+
+
     const renderedList = dataList.map(song => (
         <li key={song.id}
-            onClick={() => setSelectedId(song.id)}>
+            onClick={() => setSelectedId(song.id)}
+            className={song.id === selectedId ? 'selected' : ''}>
             {song.title} by {song.artist}
         </li>
     ))
@@ -36,12 +51,6 @@ function App() {
     //     {{ song.title }} by {{ song.artist }}
     // </li>
 
-    // TODO:
-    // - visa titel på klickad låt, bara om man valt något
-    // - CSS ska visa att det går att klicka på ett element
-    // - .selected, animera CSS
-    // (lägga till fler sånger)
-
 
     return (
         <main className="App">
@@ -49,7 +58,7 @@ function App() {
             <ul className="song-list">
                 {renderedList}
             </ul>
-            <p> You selected: {selectedId}.</p>
+            <p> {selectedMessage} </p>
         </main>
     );
 }
