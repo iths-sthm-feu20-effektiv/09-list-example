@@ -18,10 +18,10 @@
 	padding-top: 0.25em;
 	padding-left: 1em; */
 	padding: 0.25em 1em;
-	background-color: #1C58C1;
+	background-color: #3028CF;
 }
 .song-list > li:nth-child(even) {
-	background-color: #4122B3;
+	background-color: #4C28CF;
 }
 .selected {
 	padding-left: 2em;

@@ -13,7 +13,14 @@ function App() {
         { id: 2, artist: 'Brian Eno', title: 'Dune Prophecy theme' },
         { id: 3, artist: 'Bob Dylan', title: 'Hurricane' },
         { id: 4, artist: 'Slagsmålsklubben', title: 'Destiny' },
-        { id: 5, artist: 'Peaches', title: 'Rosa helikopter' }
+        { id: 5, artist: 'Peaches', title: 'Rosa helikopter' },
+        { id: 6, artist: 'Move D', title: "To the Disco '77" },
+        { id: 7, artist: 'Mohamed Ramadan', title: 'Ya Habibi' },
+        { id: 8, artist: 'Slagsmålsklubben', title: 'Ovningskora' },
+        { id: 9, artist: 'Don David', title: 'Matrix: Main title' },
+        { id: 10, artist: 'Pixies', title: 'Debaser' },
+        { id: 11, artist: 'Lazertown', title: 'Into the Moons Orbit' },
+        { id: 12, artist: 'Machinae Supremacy', title: "Theme from: Jets 'n' Guns" },
     ]
 
     const [selectedId, setSelectedId] = useState(-1)
@@ -29,10 +36,10 @@ function App() {
     //     {{ song.title }} by {{ song.artist }}
     // </li>
 
-    // TODO
-    // visa titel på klickad låt
-    // CSS ska visa att det går att klicka på ett element
-    // .selected, animera CSS
+    // TODO:
+    // - visa titel på klickad låt, bara om man valt något
+    // - CSS ska visa att det går att klicka på ett element
+    // - .selected, animera CSS
     // (lägga till fler sånger)
 
 
